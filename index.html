@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Matuto Delivery</title>
+    <meta name="description" content="O App mais Arretado!" />
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://kit.fontawesome.com/9b3bbb804d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      {
+        height: 100%;
+      }
+      
+      #app .cover-photo-wrapper .cover-photo-blurred-wrapper {
+    height: 320px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    background-color: #FD4C3A;
+      text-align: center;
+}
+      
+    .cover-photo-wrapperd {
+    height: 35px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    background-color: #fd4c3a;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+    color: #ffffff;
+}
+      
+      body {
+    
+      
+    font: 15px Roboto, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+      body {
+      background-color: #383838;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+      }
+
+      .links .link {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        font-size: 15px;
+        line-height: 18px;
+        margin: 16px 0;
+        min-height: 64px;
+        box-sizing: border-box;
+        padding: 4px;
+        position: relative;
+        border-radius: 50px;
+      }
+
+      .links .link .link-text {
+        display: flex;
+      	align-items: center;
+      	color: #fd4c3a;
+    	font-family: &#39;Poppins&#39;, sans-serif;
+   		font-weight: 300;
+      }
+
+      .links .link.with-thumbnail {
+        justify-content: left;
+        min-height: 64px;
+      }
+
+      .links .link.with-thumbnail .thumbnail-wrapper {
+        height: 100%;
+      }
+
+      .links .link.with-thumbnail .link-text {
+        text-align: left;
+      }
+
+      .links .link img {
+        box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.12);
+        object-fit: cover;
+        border-radius: 2px;
+        margin-right: 8px;
+        width: 56px;
+        height: 56px;
+        flex-shrink: 0;
+        display: block;
+      }
+      }
+
+      .links .link .link-text {
+        align-items: center;
+        color: #000;
+        font-weight: 700;
+        font-family: Lato, sans-serif;
+      }
+      
+      ::-webkit-scrollbar {display:none;}
+::-moz-scrollbar {display:none;}
+::-o-scrollbar {display:none;}
+::-google-ms-scrollbar {display:none;}
+::-khtml-scrollbar {display:none;}
+
+      :root {
+        --background-color: #FD4C3A;
+      }
+
+           
+
+        
+
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          color: #fd4c3a;
+        }
+      }
+
+      body.noAnimate * {
+        animation: none !important;
+      }
+
+      :lang(en) body {
+        font-family: Lato, sans-serif;
+      }
+
+      :lang(lt) body {
+        font-family: Lato, sans-serif;
+      }
+
+      :lang(ar) body {
+        font-family: Amiri, sans-serif;
+      }
+
+      :lang(ru) body {
+        font-family: &#39;
+        Open Sans&#39;
+        ,
+        sans-serif;
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      img {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .skip-link {
+        position: absolute;
+        top: -50px;
+        left: 0;
+        background: #000000;
+        color: white;
+        padding: 8px;
+        z-index: 100;
+      }
+
+      .skip-link:focus {
+        top: 0;
+      }
+
+      #app {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+        z-index: 1;
+      }
+
+      #app .centered-content {
+        margin: 0 auto;
+        max-width: 991px;
+      }
+
+     
+
+      #app .cover-photo-wrapper .cover-photo-blurred-wrapper .cover-photo-blurred {
+        display: none;
+        height: 195px;
+        margin-left: -5%;
+        margin-top: -10px;
+        object-fit: cover;
+        width: 110%;
+      }
+
+      @media (min-width: 991px) {
+        #app .cover-photo-wrapper .cover-photo-blurred-wrapper .cover-photo-blurred {
+          display: block;
+          filter: blur(8px);
+        }
+      }
+
+      #app .cover-photo-wrapper .cover-photo {
+        animation: animate-cover-photo 1s ease-in-out backwards;
+        height: 160px;
+      }
+
+      @media (min-width: 991px) {
+        #app .cover-photo-wrapper .cover-photo {
+          animation: none;
+          height: 300px;
+        }
+      }
+
+      #app .cover-photo-wrapper .cover-photo img {
+        object-fit: cover;
+        width: 100%;
+      }
+
+      #app .cover-photo-wrapper .cover-photo.placeholder {
+        background: #e8ebea;
+        border: 1px dashed #979797;
+        box-sizing: border-box;
+      }
+
+      #app #main {
+        background: var(--background-gradient, var(--background-color));
+        animation: animate-main 0.75s ease-out backwards;
+        border-top-left-radius: 50% 60px;
+        border-top-right-radius: 50% 60px;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: -15%;
+        margin-top: 70px;
+        position: relative;
+        text-align: center;
+        width: 130%;
+        will-change: transform;
+        z-index: 10;
+      }
+
+      #app #main.no-cover-photo {
+        animation: none;
+        border-radius: 0;
+        padding-top: 160px;
+      }
+
+      #app #main.no-cover-photo .profile-wrapper .picture-wrapper {
+        background: none;
+      }
+
+      @media (min-width: 991px) {
+        #app #main {
+          animation: none;
+          border-radius: 0;
+          margin: 0 auto;
+          width: 100%;
+        }
+      }
+
+      #app #main .main-content {
+        margin: 0px auto;
+        min-height: 100%;
+        width: 95vw;
+      }
+
+      #app #main .profile-wrapper {
+        animation: animate-profile-wrapper 0.75s ease-out backwards;
+      }
+
+      #app #main .profile-wrapper.no-photo {
+        padding-top: 30px;
+      }
+
+      @media (min-width: 991px) {
+        #app #main .profile-wrapper {
+          animation: none;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+      }
+
+      #app #main .profile-wrapper .picture-wrapper {
+        background: linear-gradient(180deg, var(--background-color) 0%, var(--background-color) 52%, transparent 52%);
+        display: inline-flex;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        margin-top: -60px;
+        width: 123px;
+        height: 123px;
+      }
+
+      #app #main .profile-wrapper .picture-wrapper .picture {
+        animation: animate-profile-photo 0.8s 0.2s backwards;
+        display: inline-flex;
+        border-radius: 50%;
+        border: 6px solid #fff;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+        z-index: 10;
+      }
+
+      #app #main .profile-wrapper .picture-wrapper .picture img {
+        object-fit: cover;
+      }
+
+      #app #main .profile-wrapper .picture-wrapper .picture .placeholder {
+        background: #e8ebea;
+        border: 1px dashed #979797;
+        border-radius: 50%;
+        box-sizing: border-box;
+        height: 100px;
+        width: 100px;
+      }
+
+      #app #main .profile-wrapper .name-bio-wrapper {
+        box-sizing: border-box;
+        width: 100vw;
+        max-width: 600px;
+        padding: 8px 32px;
+        margin: 0 auto;
+        overflow-wrap: break-word;
+      }
+
+      #app #main .profile-wrapper .name-bio-wrapper .name,
+      #app #main .profile-wrapper .name-bio-wrapper .bio {
+        overflow: hidden;
+      }
+
+      #app #main .profile-wrapper .name-bio-wrapper .name {
+        font-size: 28px;
+        line-height: 28px;
+      }
+
+      #app #main .profile-wrapper .name-bio-wrapper .bio {
+        line-height: 18px;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        margin-top: 8px;
+        text-transform: uppercase;
+      }
+
+      #app #main .profile-wrapper .name-bio-wrapper .content {
+        animation: animate-name 0.3s 0.5s backwards;
+        overflow: hidden;
+        color: #292929;
+        font-weight: 700;
+        font-family: Lato, sans-serif;
+      }
+
+      #app #main section:not(.socials) {
+        margin: 17px auto;
+        max-width: 485px;
+        border-radius: 50px;
+        box-sizing: border-box;
+        display: block;
+        flex-grow: 1;
+        text-align: center;
+        text-decoration: none;
+        width: 90%;
+        background-color: #ffffff;
+        font-weight: 500;
+      }
+
+      #app #main .socials {
+        display: flex;
+   		justify-content: center;
+   		flex-wrap: wrap; 
+    	margin: 22px 0px 94px 0px;
+    	padding: 1px;
+      }
+
+      #app #main .socials .social {
+        animation: animate-social 0.3s 0.7s backwards;
+        width: 25px;
+        height: 25px;
+      }
+
+      #app #main .socials .social.placeholder {
+        background: #e8ebea;
+        border: 1px dashed #979797;
+        border-radius: 50%;
+        height: 35px;
+        margin: 0 3px;
+        width: 35px;
+      }
+
+      #app #main .socials .social &gt;
+
+      * {
+        width: 40px;
+        height: 40px;
+      }
+
+      #app #main .links {
+        position: relative;
+
+        .links .link .link-text {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      #app #main .links .link {
+        --animation-timing: calc(var(--animation-delay) / 5);
+        animation: animate-link calc(var(--animation-timing) + 0.4s) 0.8s backwards;
+        background-color: #fff;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+        font: 14px &quot;
+        Google Sans&quot;
+        ,
+        Arial,
+        sans-serif;
+      }
+
+      #app #main .links .link.placeholder {
+        background: #e8ebea;
+        border: 1px dashed #979797;
+      }
+
+      #app #main .text_box {
+        --animation-timing: calc(var(--animation-delay) / 5);
+        animation: animate-link calc(var(--animation-timing) + 0.2s) 0.8s backwards;
+        margin: 40px auto;
+        position: relative;
+      }
+
+      #app #main .text_box .title {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 10px;
+        text-align: center;
+        word-wrap: break-word;
+      }
+
+      #app #main .text_box .description {
+        font-size: 15px;
+        font-weight: normal;
+        line-height: 23px;
+        word-wrap: break-word;
+      }
+
+      #app #main .support {
+        --animation-timing: calc(var(--animation-delay) / 5);
+        animation: animate-link calc(var(--animation-timing) + 0.2s) 0.8s backwards;
+        margin: 21px 32px;
+        position: relative;
+      }
+
+      #app #main .support .content {
+        background-color: #fff;
+        border-radius: 2.5px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+        padding: 11px 14px 17px 14px;
+      }
+
+      #app #main .support .title {
+        font-size: 19px;
+        line-height: 40px;
+      }
+
+      #app #main .support .link {
+        align-items: center;
+        border: 2px solid #666;
+        border-radius: 2.5px;
+        box-sizing: border-box;
+        display: flex;
+        font-size: 14px;
+        height: 60px;
+        justify-content: center;
+        line-height: 56px;
+        margin-top: 12px;
+      }
+
+      #app #main .support .link img {
+        margin-right: 10px;
+      }
+
+      #app #main .support .link.placeholder {
+        background: #e8ebea;
+        border: 1px dashed #979797;
+      }
+
+      #app #main .support .link.venmo {
+        border-color: #008cff;
+        color: #008cff;
+      }
+
+      #app #main .support .link.cashapp {
+        border-color: #00d632;
+        color: #00d632;
+      }
+
+      #app #main .support .link.patreon {
+        border-color: #ff424d;
+        color: #ff424d;
+      }
+
+      #app #main .support .link.paypal {
+        border-color: #253b80;
+        color: #253b80;
+      }
+
+      #app #main .support .link.bandcamp {
+        border-color: #1da0c3;
+        color: #1da0c3;
+      }
+
+      #app #main .support .link.kickstarter {
+        border-color: #061b57;
+        color: #061b57;
+      }
+
+      #app #main .support .link.gofundme {
+        border-color: #00b460;
+        color: #00b460;
+      }
+
+      #app #main .embed_video {
+        --animation-timing: calc(var(--animation-delay) / 5);
+        animation: animate-link calc(var(--animation-timing) + 0.2s) 0.8s backwards;
+      }
+
+      #app #main .embed_video .video {
+        padding-top: 56.25% !important;
+        position: relative;
+      }
+
+      #app #main .embed_video .video .preview {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
+      #app #main .embed_video .video iframe {
+        background: #000;
+        border: none;
+        left: 0;
+        position: absolute;
+        top: 0;
+      }
+
+      #app #main .embed_music {
+        --animation-timing: calc(var(--animation-delay) / 5);
+        animation: animate-link calc(var(--animation-timing) + 0.2s) 0.8s backwards;
+      }
+
+      #app #main .embed_music .preview {
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+        width: 100%;
+      }
+
+      #app #main .embed_music iframe {
+        border: none;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      #app #main .embed_music iframe.spotify {
+        height: 80px;
+      }
+
+      #app #main .embed_music iframe.soundcloud {
+        height: 171px;
+      }
+
+      footer.watermark {
+        animation: animate-watermark 0.5s 2s backwards;
+        padding: 30px;
+        text-transform: uppercase;
+      }
+
+      footer.watermark a {
+        color: rgba(0, 0, 0, 0.35);
+        display: inline-block;
+        font-size: 7.5px;
+      }
+
+      footer.watermark a span.unfold {
+        color: #000;
+        display: block;
+        font-size: 10px;
+        letter-spacing: 0.34px;
+      }
+
+      #main.isDark {
+        color: #fff;
+      }
+
+      #main.isDark .social img {
+        filter: invert(1);
+      }
+
+      #main.isDark footer.watermark a {
+        color: rgba(255, 255, 255, 0.35);
+      }
+
+      #main.isDark footer.watermark a span.unfold {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    
+    
+    <div id='app'>
+        <div class='cover-photo-wrapper'>
+          <div class='cover-photo-blurred-wrapper'>
+            <img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8TeLCXzk_VcaACV6pEfxnC69AJDvMurSu73Vd4c0fwGV4Cd6uyqJ19N8s8_rYPVoMHdpKNeMrkhLZrdz8UwENdztV9FFqnDMKi00YCSGpMF6ZBAT4rI24Hv0cLoH7H0hsLYHyhda6ssrqD_DkAv7WYRU7SpmpvRZMzyc8h9CpmdV2oihmCwa5rd7jlA/s1600/ic_logo.png' style='height: 140px; padding: 50px;'/>
+
+          </div>
+          <div class='cover-photo centered-content'>
+          </div>
+        </div>
+        <div class=' ' id='main'>
+          <div class='main-content'>
+              
+                <a href='https://www.rcarvalhografica.com.br/'>
+                  
+                </a>
+              
+              <div class='name-bio-wrapper'>
+                
+                     <div style='--aspect-ratio: 16/9;'>
+</div>               
+
+              </div>
+            
+            <section class='body_section links'>
+              <a class='link ' href='https://app.matutodelivery.com.br' rel='noopener' style='--animation-delay: 1s;'>
+                <div class='link-text'>Acessar App Web - Teste</div>
+              </a>
+            </section>
+            <section class='body_section links'>
+              <a class='link ' href='https://parceiro.matutodelivery.com.br/' rel='noopener' style='--animation-delay: 1s;'>
+                <div class='link-text'>Seja um Parceiro</div>
+              </a>
+            </section>
+            <section class='body_section links'>
+              <a class='link ' href='/' rel='noopener' style='--animation-delay: 1s;' target='_blank'>
+                <div class='link-text'>Como Pedir</div>
+              </a>
+            </section>
+            <section class='body_section links'>
+              <a class='link ' href='/' rel='noopener' style='--animation-delay: 1s;' target='_blank'>
+                <div class='link-text'>Guia de marca</div>
+              </a>
+            </section>
+            <section class='body_section links'>
+              <a class='link ' href='/' rel='noopener' style='--animation-delay: 1s;' target='_blank'>
+                <div class='link-text'>Sobre</div>
+              </a></section>
+            
+            
+            <section class='body_section socials'>
+              <a aria-label='instagram' class='instagram social' href='https://www.instagram.com/matuto_delivery/' rel='noopener' target='_blank'>
+                <img alt='instagram icon' height='16' src='https://s3.amazonaws.com/appforest_uf/f1650230140586x881274395777108400/instagrammatuto.svg' width='16'/>
+              </a>
+            </section>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class='cover-photo-wrapperd'>
+              
+Matuto Delivery
+            </div>
+    
+    
+  </body>
+  <script>
+    if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js', { scope: '/' }).then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
+</html>
