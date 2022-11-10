@@ -1,4 +1,3 @@
-importScripts('https://cdn.onesignal.com/sdks/OneSignalSDKWorker.js');
 import 'regenerator-runtime';
 import CacheHelper from './';
 
