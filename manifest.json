@@ -5,9 +5,9 @@
 "short_name": "Matuto Delivery",  
 "description": "O app mais Arretado!", 
 "lang": "pt-BR",
-"start_url": "./",
+"start_url": "/",
 "background_color": "#fd4c3a"
-"scope": "./",  
+"scope": "/",  
 "display": "standalone",  
 "orientation": "portrait", 
 "theme_color": "#fd4c3a",  
