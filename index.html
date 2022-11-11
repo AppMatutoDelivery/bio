@@ -10,31 +10,9 @@
     <script src="https://kit.fontawesome.com/9b3bbb804d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="/img/icone.png" />
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-<script>
-  window.OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
-      appId: "12c03d78-ca15-470a-8d5b-e3dbe5014da4",
-    });
-  });
-</script>
-    
-    <script>
-   var OneSignal = window.OneSignal || [];
-    var initConfig = {
-        appId: "12c03d78-ca15-470a-8d5b-e3dbe5014da4",
-        notifyButton: {
-            enable: true
-        },
-    };
-    OneSignal.push(function () {
-        OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
-        OneSignal.SERVICE_WORKER_PATH = '/OneSignalSDKWorker.js'
-        OneSignal.init(initConfig);
-    });
-</script>
+    <script src="/sistema.js" defer></script>
+
+
     <style>
       {
         height: 100%;
@@ -709,17 +687,5 @@
     
   </body>
 
-  <script>
-    if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js', { scope: '/' }).then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-</script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
 </html>
