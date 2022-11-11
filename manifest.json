@@ -4,22 +4,22 @@
 "short_name": "Matuto Delivery",  
 "description": "O app mais Arretado!", 
 "lang": "pt-BR",
-"start_url": "/",  
-"id": "/",  
-"scope": "/",  
+"start_url": "https://matuto-delivery-beta.bubbleapps.io/version-test/app",  
+"id": "https://matuto-delivery-beta.bubbleapps.io/version-test/app",  
+"scope": "https://matuto-delivery-beta.bubbleapps.io/version-test/app",  
 "display": "standalone",  
 "orientation": "portrait", 
 "theme_color": "#fd4c3a",  
 
 "icons": [    
-{"src": "/asset/icon/512.png", "sizes": "512x512", "type": "image/png"},  
-{"src": "/asset/icon/192.png", "sizes": "192x192", "type": "image/png"},   
-{"src": "/asset/icon/144.png", "sizes": "144x144", "type": "image/png"}, 
-{"src": "/asset/icon/96.png", "sizes": "96x96", "type": "image/png"},  
-{"src": "/asset/icon/72.png", "sizes": "72x72", "type": "image/png"},  
-{"src": "/asset/icon/48.png", "sizes": "48x48", "type": "image/png"},  
-{"src": "/asset/icon/36.png", "sizes": "36x36", "type": "image/png"},
-{"src": "/asset/icon/196.png","sizes": "196x196","type": "image/png","purpose": "maskable"}
+{"src": "https://www.matutodelivery.com.br/asset/icon/512.png", "sizes": "512x512", "type": "image/png"},  
+{"src": "https://www.matutodelivery.com.br/asset/icon/192.png", "sizes": "192x192", "type": "image/png"},   
+{"src": "https://www.matutodelivery.com.br/asset/icon/144.png", "sizes": "144x144", "type": "image/png"}, 
+{"src": "https://www.matutodelivery.com.br/asset/icon/96.png", "sizes": "96x96", "type": "image/png"},  
+{"src": "https://www.matutodelivery.com.br/asset/icon/72.png", "sizes": "72x72", "type": "image/png"},  
+{"src": "https://www.matutodelivery.com.br/asset/icon/48.png", "sizes": "48x48", "type": "image/png"},  
+{"src": "https://www.matutodelivery.com.br/asset/icon/36.png", "sizes": "36x36", "type": "image/png"},
+{"src": "https://www.matutodelivery.com.br/asset/icon/196.png","sizes": "196x196","type": "image/png","purpose": "maskable"}
         ], 
 
 "background_color": "#fd4c3a"
