@@ -1,4 +1,3 @@
-
 {  
 
 "name": "Matuto Delivery",  
@@ -7,8 +6,7 @@
 "lang": "pt-BR",
 "start_url": "/",  
 "id": "/",  
-"scope": "/",
-"background_color": "#fd4c3a",
+"scope": "/",  
 "display": "standalone",  
 "orientation": "portrait", 
 "theme_color": "#fd4c3a",  
@@ -23,6 +21,6 @@
 {"src": "/asset/icon/36.png", "sizes": "36x36", "type": "image/png"}  
         ], 
 
-
+"background_color": "#fd4c3a"
 
 }
