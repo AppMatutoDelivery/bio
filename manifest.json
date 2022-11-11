@@ -7,7 +7,6 @@
 "lang": "pt-BR",
 "start_url": "./",
 "background_color": "#fd4c3a"
-"id": "./",  
 "scope": "./",  
 "display": "standalone",  
 "orientation": "portrait", 
