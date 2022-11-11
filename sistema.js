@@ -2,6 +2,6 @@
 
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-      .register('./sw.js')
+      .register('https://www.matutodelivery.com.br/sw.js')
       .then(() => { console.log('Service Worker Registered'); });
 }
