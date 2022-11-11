@@ -13,6 +13,8 @@ self.addEventListener("message", (event) => {
   }
 });
 
+
+
 self.addEventListener('install', async (event) => {
   event.waitUntil(
     caches.open(CACHE)
@@ -22,6 +24,16 @@ self.addEventListener('install', async (event) => {
 
 if (workbox.navigationPreload.isSupported()) {
   workbox.navigationPreload.enable();
+}
+
+if (!('serviceWorker' in navigator)) {
+  // Service Worker isn't supported on this browser, disable or hide UI.
+  return;
+}
+
+if (!('PushManager' in window)) {
+  // Push isn't supported on this browser, disable or hide UI.
+  return;
 }
 
 self.addEventListener('fetch', (event) => {
