@@ -4,7 +4,7 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox
 
 const CACHE = "intellisoft-v1";
 
-// TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
+// TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "https://www.matutodelivery.com.br/offline.html";
 const offlineFallbackPage = "offline.html";
 
 self.addEventListener("message", (event) => {
